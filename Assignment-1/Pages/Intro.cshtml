@@ -1,8 +1,15 @@
 ﻿@page
 @{
     ViewData["Title"] = "Intro Page";
+    var sum = 0;
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>"This is fucking title"</title>
+</head>
 <body>
     <h3>Aman Thakur</h3>
     <form>
@@ -11,7 +18,17 @@
         <label for="input2">Second Input:</label><br />
         <input type="text" id="input2" name="textbox" value="" placeholder="Enter second value" /> <br />
         <label for="outputLabel">Output:</label><br />
-        <label for="outputValue">OK</label><br />
-        <input type="submit" value="Submit" />
+        <label for="outputValue" id="outputValue"></label><br />
+        <input type="submit" value="Submit" onclick="updateOutput()" />
     </form>
 </body>
+</html>
+
+
+
+<script>function updateOutput() {
+        var input1 = document.getElementById('input1').value;
+        var input2 = document.getElementById('input2').value;
+        sum = input1 + input2;
+        document.getElementById('input2').value = sum;
+    }</script>
