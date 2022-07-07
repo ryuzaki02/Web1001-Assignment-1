@@ -1,34 +1,23 @@
 ﻿@page
 @{
     ViewData["Title"] = "Intro Page";
-    var sum = 0;
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>"This is fucking title"</title>
-</head>
 <body>
     <h3>Aman Thakur</h3>
-    <form>
+    <form method="post">
         <label for="input1">First Input:</label><br />
-        <input type="text" id="input1" name="textbox" value="" placeholder="Enter first value" /> <br />
+        <input type="number" id="input1" name="input1" value="" placeholder="Enter first value" /> <br />
         <label for="input2">Second Input:</label><br />
-        <input type="text" id="input2" name="textbox" value="" placeholder="Enter second value" /> <br />
-        <label for="outputLabel">Output:</label><br />
-        <label for="outputValue" id="outputValue"></label><br />
-        <input type="submit" value="Submit" onclick="updateOutput()" />
+        <input type="number" id="input2" name="input2" value="" placeholder="Enter second value" /> <br />
+        <output>Output:</output><br />
+        <input type="submit" value="Submit" />
     </form>
 </body>
-</html>
 
-
-
-<script>function updateOutput() {
-        var input1 = document.getElementById('input1').value;
-        var input2 = document.getElementById('input2').value;
-        sum = input1 + input2;
-        document.getElementById('input2').value = sum;
-    }</script>
+@section IntroScript
+{
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta non pulvinar neque laoreet suspendisse interdum consectetur. Sapien et ligula ullamcorper malesuada. Imperdiet proin fermentum leo vel. Ac ut consequat semper viverra nam libero. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Id faucibus nisl tincidunt eget nullam non nisi est. Facilisi nullam vehicula ipsum a arcu cursus. Etiam erat velit scelerisque in dictum non consectetur a. Sit amet mattis vulputate enim nulla. Massa tempor nec feugiat nisl pretium fusce. Sit amet justo donec enim diam vulputate.
+    </p>
+}
