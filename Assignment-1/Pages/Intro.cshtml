@@ -1,16 +1,16 @@
 ﻿@page
+@model IntroModel
 @{
-    ViewData["Title"] = "Intro Page";
-}
-
+        ViewData["Title"] = "Intro Page";
+ }
 <body>
     <h3>Aman Thakur</h3>
-    <form method="post">
+    <form method="get">
         <label for="input1">First Input:</label><br />
-        <input type="number" id="input1" name="input1" value="" placeholder="Enter first value" /> <br />
+        <input type="number" name="leftNumber" asp-for="leftNumber" placeholder="Enter first value" /> <br />
         <label for="input2">Second Input:</label><br />
-        <input type="number" id="input2" name="input2" value="" placeholder="Enter second value" /> <br />
-        <output>Output:</output><br />
+        <input type="number" name="rightNumber" asp-for="rightNumber" placeholder="Enter second value" /> <br />
+        <output>Output: @ViewData["Result"]</output><br />
         <input type="submit" value="Submit" />
     </form>
 </body>
